@@ -1,97 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Title Page</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Title Page</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1d3557, #457b9d);
+      overflow: hidden;
+      position: relative;
+    }
 
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(120deg, #ff9a9e 0%, #fad0c4 100%);
-            overflow: hidden;
-        }
+    .heading {
+      text-align: center;
+      color: white;
+      z-index: 2;
+      animation: fadeIn 3s ease-in-out;
+    }
 
-        .container {
-            text-align: center;
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            background: rgba(0, 0, 0, 0.3);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
+    .title1 {
+      font-size: 60px;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      animation: slideIn 2s ease-in-out;
+    }
 
-        .main-title {
-            font-size: 3rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            animation: fadeIn 2s ease-in-out;
-        }
+    .title2 {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #f1faee;
+      animation: fadeIn 3s ease-in-out 1.5s;
+    }
 
-        .sub-title {
-            margin-top: 1rem;
-            font-size: 1.5rem;
-            animation: fadeIn 3s ease-in-out;
-        }
+    .waves {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 20%;
+      background: url('https://svgshare.com/i/qb9.svg') repeat-x;
+      background-size: contain;
+      animation: wave 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    }
 
-        .animated-text {
-            margin-top: 1.5rem;
-            font-size: 1.2rem;
-            color: #ffeaa7;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid white;
-            animation: typing 3s steps(30, end), blink .5s step-end infinite;
-        }
+    .waves::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      width: 100%;
+      height: 20%;
+      background: url('https://svgshare.com/i/qb9.svg') repeat-x;
+      background-size: contain;
+      animation: wave 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      animation-delay: -3s;
+    }
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
 
-        @keyframes blink {
-            from, to { border-color: transparent; }
-            50% { border-color: white; }
-        }
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100px);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    @keyframes wave {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
 
-        .button {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-            color: white;
-            background: #6c5ce7;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: background 0.3s, transform 0.3s;
-        }
-
-        .button:hover {
-            background: #81ecec;
-            transform: translateY(-3px);
-        }
-    </style>
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="main-title">Welcome to My Website</div>
-        <div class="sub-title">Where innovation meets creativity</div>
-        <div class="animated-text">Bringing ideas to life...</div>
-        <a href="#" class="button">Get Started</a>
-    </div>
+  <div class="heading">
+    <div class="title1">Your Main Title</div>
+    <div class="title2">Your Subtitle Goes Here</div>
+  </div>
+  <div class="waves"></div>
 </body>
 </html>
