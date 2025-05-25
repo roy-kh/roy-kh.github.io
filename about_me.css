@@ -37,15 +37,16 @@ body {
     display: block;
 }
 
-.fade{
+
+
+.fade {
     position: absolute;
     top: 310px;
-    bottom:300px;
+    bottom: 290px;
     left: 120px;
     z-index: 2;
     display: block;
 }
-
 
 
 .title1{
