@@ -41,8 +41,8 @@ body {
 
 .fade {
     position: absolute;
-    top: 310px;
-    bottom: 290px;
+    top: 290px;
+    bottom: 270px;
     left: 120px;
     z-index: 2;
     display: block;
