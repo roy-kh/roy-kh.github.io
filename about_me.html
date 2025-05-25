@@ -1,49 +1,55 @@
-<!DOCTYPE html> 
 <html>
-    <head>
-        <title>Roy Hayyat's Portfolio</title>
-        <link rel="stylesheet" href="about_me.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<head>
+    <title>Roy Hayyat's Portfolio</title>
+    <link rel="stylesheet" href="about_me.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
 
-    <body>
-        
-        
-            <div>
-                <a class="button" href="index.html">
-                    <img src="home.png" alt ="image!!!" class="home" width="20px">
-                </a>
-                
-                
-            </div>
-            
-                <img src="me-removebg.png" alt ="image!!!" class="me" width="500">
-                <img src="bottom-fade.png" alt ="image!!!" class="fade" width="400" >
-                
-            
-            <div class="about">
-                <span class="title1">About Me</span>
-                <p class= "title2">I am a curious-minded graduate from USC who is always eager to connect with new people and learn from diverse experiences.<br> <br>
-                    As a Data Analyst, I specialize in leveraging data to streamline business processes and drive strategic growth. <br> <br>
-                    With a strong foundation in Economics and Mathematics, I have excelled in Statistical Data Analysis, Cross-functional Team Leadership, Programming (Python, SQL), Predictive Modeling and Data Visualization. <br> <br>
-                    I have a passion for solving complex challenges, collaborating across teams, expanding my knowledge and soccer! Feel free to view my GitHub or reach out to connect!
-                </p>
+        .me, .fade {
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
 
-                <a class="button" id="linkedin" href="https://www.linkedin.com/in/royhayyat/" style="border: 1px black solid;">
-                    <img src="linkedin.png" alt ="image!!!" class="home" width="20px">
-                </a>   
+<body>
+    <div>
+        <a class="button" href="index.html">
+            <img src="home.png" alt="image!!!" class="home" width="20px">
+        </a>
+    </div>
 
-                <a class="button" id="linkedin" href="https://github.com/roy-kh" style="border: 1px black solid; margin-left:55px" >
-                    <img src="git.png" alt ="image!!!" class="home" width="20px">
-                </a>   
+    <div class="image-container">
+        <img src="me-removebg.png" alt="image!!!" class="me">
+        <img src="bottom-fade.png" alt="image!!!" class="fade">
+    </div>
 
-                <a class="button" id="linkedin" href="mailto:roykhayat@alumni.usc.edu" style="border: 1px black solid; margin-left:55px" >
-                    <img src="mail2.png" alt ="image!!!" class="home" width="20px">
-                </a>   
+    <div class="about">
+        <span class="title1">About Me</span>
+        <p class="title2">I am a curious-minded graduate from USC who is always eager to connect with new people and learn from diverse experiences.<br><br>
+            As a Data Analyst, I specialize in leveraging data to streamline business processes and drive strategic growth.<br><br>
+            With a strong foundation in Economics and Mathematics, I have excelled in Statistical Data Analysis, Cross-functional Team Leadership, Programming (Python, SQL), Predictive Modeling and Data Visualization.<br><br>
+            I have a passion for solving complex challenges, collaborating across teams, expanding my knowledge and soccer! Feel free to view my GitHub or reach out to connect!
+        </p>
 
-            </div>
-        <footer style="text-align: center; margin-top: 550px;">© 2025 Roy Hayyat</footer>
-        
-    </body>
+        <a class="button" id="linkedin" href="https://www.linkedin.com/in/royhayyat/" style="border: 1px black solid;">
+            <img src="linkedin.png" alt="image!!!" class="home" width="20px">
+        </a>
 
+        <a class="button" id="linkedin" href="https://github.com/roy-kh" style="border: 1px black solid; margin-left:55px">
+            <img src="git.png" alt="image!!!" class="home" width="20px">
+        </a>
+
+        <a class="button" id="linkedin" href="mailto:roykhayat@alumni.usc.edu" style="border: 1px black solid; margin-left:55px">
+            <img src="mail2.png" alt="image!!!" class="home" width="20px">
+        </a>
+    </div>
+
+    <footer style="text-align: center; margin-top: 550px;">© 2025 Roy Hayyat</footer>
+</body>
 </html>
