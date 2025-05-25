@@ -1,76 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smooth Transition Background</title>
-<style>
-/* General Styles */
-html {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    background: #2d2d2d;
-}
-
-/* Background Layers */
-.bg {
-    position: fixed;
-    top: 0; bottom: 0; left: 0; right: 0;
-    z-index: -1;
-    opacity: 0.4;
-    background: linear-gradient(270deg, #2E8B57, #98FB98);
-    background-size: 400% 400%;
-    animation: smoothShift 12s ease infinite;
-}
-
-.bg2 {
-    position: fixed;
-    top: 0; bottom: 0; left: 0; right: 0;
-    z-index: -2;
-    opacity: 0.3;
-    background: linear-gradient(270deg, #228B22, #6B8E23);
-    background-size: 400% 400%;
-    animation: smoothShift 14s ease infinite reverse;
-}
-
-.bg3 {
-    position: fixed;
-    top: 0; bottom: 0; left: 0; right: 0;
-    z-index: -3;
-    opacity: 0.2;
-    background: linear-gradient(270deg, #006400, #556B2F);
-    background-size: 400% 400%;
-    animation: smoothShift 16s ease infinite;
-}
-
-@keyframes smoothShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    25% {
-        background-position: 50% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    75% {
-        background-position: 50% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Content Styling */
 .heading {
     width: 800px;
     height: 300px;
     margin: auto;
     position: absolute;
-    top: 0; bottom: 0; right: 0; left: 0;
+    top: 0px; bottom: 0px; right: 0px; left: 0px;
     text-align: center;
 }
 
@@ -88,6 +21,7 @@ body {
     text-align: center;
     color: rgb(80, 91, 97);
     font-size: 17pt;
+    font-family: serif;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -95,9 +29,11 @@ a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
+
     text-decoration: none;
     color: initial;
     line-height: 40px;
+
     margin: 30px auto;
     margin-bottom: -4px;
     display: inline-block;
@@ -112,6 +48,7 @@ a.button {
     margin-left: 3px;
     margin-right: 3px;
     transition: background-color 500ms, color 500ms, font-size 100ms;
+
     box-shadow: 0 0 .15em rgba(0, 0, 0, .25);
 }
 
@@ -121,6 +58,43 @@ a.button:hover {
     color: whitesmoke;
     cursor: pointer;
     transition: background-color 500ms, color 500ms, font-size 300ms;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #2d2d2d;
+}
+
+.bg {
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: -1;
+    opacity: 1;
+    background: linear-gradient(270deg, #2E8B57, #98FB98, #228B22, #6B8E23, #006400, #556B2F);
+    background-size: 800% 800%;
+    animation: animatedBackground 10s linear infinite;
+}
+
+@keyframes animatedBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .content {
@@ -170,27 +144,97 @@ h1 {
     white-space: nowrap;
     top: 0;
     left: 0;
-    animation: move 5s infinite 1s;
+
+    /*animation*/
+    -webkit-animation: move 5s;
+    -moz-animation: move 5s;
+    -ms-animation: move 5s;
+    -o-animation: move 5s;
+    animation: move 5s;
+
+    /*animation-iteration-count*/
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    /*animation-delay*/
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
 }
 
 @keyframes move {
-    0% { top: 0px; }
-    20% { top: -31px; }
-    40% { top: -62px; }
-    60% { top: -93px; }
-    80% { top: -124px; }
+    0% {
+        top: 0px;
+    }
+    20% {
+        top: -31px;
+    }
+    40% {
+        top: -62px;
+    }
+    60% {
+        top: -93px;
+    }
+    80% {
+        top: -124px;
+    }
 }
-</style>
-</head>
-<body>
-<div class="bg"></div>
-<div class="bg2"></div>
-<div class="bg3"></div>
 
-<div class="content">
-    <h1 class="title1">Welcome to My Page</h1>
-    <p class="title2">Beautiful animations and smooth transitions</p>
-    <a href="#" class="button">Click Me</a>
-</div>
-</body>
-</html>
+@-webkit-keyframes move {
+    0% {
+        top: 0px;
+    }
+    20% {
+        top: -31px;
+    }
+    40% {
+        top: -62px;
+    }
+    60% {
+        top: -93px;
+    }
+    80% {
+        top: -124px;
+    }
+}
+
+@-moz-keyframes move {
+    0% {
+        top: 0px;
+    }
+    20% {
+        top: -31px;
+    }
+    40% {
+        top: -62px;
+    }
+    60% {
+        top: -93px;
+    }
+    80% {
+        top: -124px;
+    }
+}
+
+@-o-keyframes move {
+    0% {
+        top: 0px;
+    }
+    20% {
+        top: -31px;
+    }
+    40% {
+        top: -62px;
+    }
+    60% {
+        top: -93px;
+    }
+    80% {
+        top: -124px;
+    }
+}
