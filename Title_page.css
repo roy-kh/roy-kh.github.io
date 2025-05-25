@@ -78,7 +78,7 @@ html {
   
   .bg {
     animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #228B22 50%, #2E8B57 50%); /* Forest Green and Sea Green */
+    background-image: linear-gradient(-60deg, #6B8E23 50%, #98FB98 50%);
     bottom:0;
     left:-50%;
     opacity:.4;
@@ -91,12 +91,12 @@ html {
   .bg2 {
     animation-direction:alternate-reverse;
     animation-duration:4s;
-    background-image: linear-gradient(-60deg, #006400 50%, #228B22 50%);
+    background-image: linear-gradient(-60deg, #8FBC8F 50%, #6B8E23 50%);
   }
   
   .bg3 {
     animation-duration:5s;
-    background-image: linear-gradient(-60deg, #2E8B57 50%, #006400 50%); /* Sea Green and Dark Green */
+    background-image: linear-gradient(-60deg, #98FB98 50%, #8FBC8F 50%);
   }
   
   .content {
