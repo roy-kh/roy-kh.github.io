@@ -78,7 +78,7 @@ html {
   
   .bg {
     animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #008080 50%, rgb(118, 158, 185) 50%);
+    background-image: linear-gradient(-60deg, #228B22 50%, #2E8B57 50%); /* Forest Green and Sea Green */
     bottom:0;
     left:-50%;
     opacity:.4;
@@ -91,10 +91,12 @@ html {
   .bg2 {
     animation-direction:alternate-reverse;
     animation-duration:4s;
+    background-image: linear-gradient(-60deg, #006400 50%, #228B22 50%);
   }
   
   .bg3 {
     animation-duration:5s;
+    background-image: linear-gradient(-60deg, #2E8B57 50%, #006400 50%); /* Sea Green and Dark Green */
   }
   
   .content {
