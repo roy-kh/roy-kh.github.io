@@ -3,44 +3,42 @@
     <head>
         
         <title>Roy Hayyat's Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="Title_page.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="lava-lamp.js" defer></script>
+        <script src="slot-machine.js" defer></script>
     </head>
 
     <body>
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
+        <div id="lava-lamp-container"></div>
         
         <div class="heading" style="text-align: center;"></div>
-            <div class="content">
-                <span class="title1">Roy Hayyat</span>
-                <div class="Iam">
-
-                    <b>
-                      <div class="innerIam">
-                        Data Analyst<br /> 
-                        Business Operations Strategist<br />
-                        Machine Learning Enthusiast
-                        </div>
-                    </b>
-                    
-                </div>
-                <a class="button" href="about_me.html">
-                    About me
-                </a>
-    
-                <a class="button" href="rhayyat-resume.pdf">
-                    Resume
-                </a>
-    
-                <a class="button" href="https://github.com/roy-kh?tab=repositories" target="_blank">
-                    Projects
-                </a>
+        <div class="content">
+            <span class="title1">Roy Hayyat</span>
+            <div class="Iam">
+                <b id="slot-machine-text"></b>
             </div>
+            <a class="button" href="about_me.html">
+                About me
+            </a>
 
-            <div style="margin-top: 650px; text-align: center;">© 2025 Roy Hayyat</div>
-        
+            <a class="button" href="rhayyat-resume.pdf">
+                Resume
+            </a>
+
+            <a class="button" href="https://github.com/roy-kh?tab=repositories" target="_blank">
+                Projects
+            </a>
+        </div>
+
+        <div class="currently-working">
+            <div class="glass-container">
+                <span class="working-label">Currently working on:</span>
+                <span class="working-text" id="working-text">Daybreak: an AI-powered Productivity App!</span>
+            </div>
         </div>
     </body>  
     
